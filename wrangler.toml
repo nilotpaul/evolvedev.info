@@ -1,0 +1,26 @@
+name = "evolve-as-dev-remix"
+compatibility_date = "2023-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+dev.port = 5175
+
+pages_build_output_dir = "./build/client"
+
+# [vars]
+# MY_VAR = "my-variable"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
