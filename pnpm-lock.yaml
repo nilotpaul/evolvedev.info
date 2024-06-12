@@ -115,9 +115,6 @@ devDependencies:
   autoprefixer:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
-  cloudflare:
-    specifier: link:@types/@remix-run/cloudflare
-    version: link:@types/@remix-run/cloudflare
   eslint:
     specifier: ^8.38.0
     version: 8.57.0
