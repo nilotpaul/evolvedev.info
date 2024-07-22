@@ -6,8 +6,8 @@ const Top = () => {
           Empowering Coders to Evolve and Excel
         </h1>
 
-        <p className='playwrite-hr-lijeva-400 mt-5 transform text-start font-mono text-3xl transition duration-500 hover:scale-110 hover:text-gray-500'>
-          Powering the future of web development with EvolveDev !
+        <p className='roboto-mono-400 mt-5 transform text-start font-mono text-3xl transition duration-500 hover:scale-110 hover:text-gray-500'>
+          Powering the future of web development with EvolveDev!
         </p>
       </div>
 
