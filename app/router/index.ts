@@ -8,6 +8,7 @@ export const routesConfig = (routes: DefineRouteFunction) => {
   routes('/', 'pages/Home.tsx', () => {
     // All nested routes will inherit the layout of the parent route i.e. Home
     routes('/about', 'pages/About.tsx');
+    routes('/contact', 'pages/Contact.tsx');
   });
 
   // Catch all routes that doesn't exists and show a 404 page.

@@ -17,9 +17,13 @@ const config = {
       padding: '2rem',
       screens: {
         '2xl': '1400px',
+        xs: '380px',
       },
     },
     extend: {
+      transitionDuration: {
+        '5000': '5000ms',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

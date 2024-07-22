@@ -10,13 +10,13 @@ type HeadingProps = {
 
 const Heading = ({ classNames, children, ...props }: HeadingProps) => {
   return (
-    <h1
-      {...props}
-      className={cn('font-headings xs:text-4xl mb-8 w-fit text-3xl font-bold', classNames?.h1)}
-    >
+    <h2 className={cn('xs:text-xl w-fit text-base font-semibold md:text-2xl', classNames?.h1)}>
       {children}
-      <Separator className={cn('bg-rose dark:bg-rose mt-1.5 h-[2.5px]', classNames?.separator)} />
-    </h1>
+
+      <Separator
+        className={cn('mx-auto -ml-[1.75rem] mt-2 w-[calc(100%+3.5rem)]', classNames?.separator)}
+      />
+    </h2>
   );
 };
 
