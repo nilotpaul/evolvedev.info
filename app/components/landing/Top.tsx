@@ -1,7 +1,4 @@
-import { useTheme } from '../ThemeProvider';
-
 const Top = () => {
-  const { theme } = useTheme();
   return (
     <div className='grid  grid-cols-[1.5fr_1fr] items-center justify-center gap-24'>
       <div className='flex w-full flex-col justify-center'>
@@ -14,11 +11,7 @@ const Top = () => {
         </p>
       </div>
 
-      <img
-        className='duration-5000'
-        src={theme === 'dark' ? '/image-dark.png' : '/image-light.png'}
-        alt='Site Artwork'
-      />
+      <img className='duration-5000' src='/assets/landing-img1.png' alt='Site Artwork' />
     </div>
   );
 };

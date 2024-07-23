@@ -1,10 +1,10 @@
-import About from '~/components/landing/Mission';
+import Mission from '~/components/landing/Mission';
 import Top from './Top';
 import Services from './Services';
 import Resources from './Resources';
 import FAQ from './FAQ';
 import Article from './Article';
-import Mission from '~/components/landing/Mission';
+import BlogArticle from './BlogArticles';
 
 const Landing = () => {
   return (
@@ -13,6 +13,7 @@ const Landing = () => {
       <Mission />
       <Services />
       <Article />
+      <BlogArticle />
       <Resources />
       <FAQ />
     </div>

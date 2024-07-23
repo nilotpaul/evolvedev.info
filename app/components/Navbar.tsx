@@ -1,7 +1,6 @@
 import ThemeToggle from './ThemeToggle';
 import Container from './Container';
 import { Link } from '@remix-run/react';
-import { NAV_LINKS } from '~/config/site-links';
 import { useTheme } from './ThemeProvider';
 import { cn } from '~/lib/utils';
 
