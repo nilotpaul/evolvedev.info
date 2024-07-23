@@ -27,9 +27,12 @@ const Navbar = () => {
               {NAV_LINKS.map((link) => (
                 <Link key={link.path} to={link.path} className='mt-2 flex items-center'>
                   <p
-                    className={cn(' -mt-1 font-mono text-base font-bold text-slate-400', {
-                      'text-slate-700': theme === 'light',
-                    })}
+                    className={cn(
+                      ' -mt-1 font-mono text-base font-bold text-slate-400 hover:underline',
+                      {
+                        'text-slate-700': theme === 'light',
+                      }
+                    )}
                   >
                     {link.name}
                   </p>
