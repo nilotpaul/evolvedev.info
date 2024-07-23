@@ -11,9 +11,8 @@ const Landing = () => {
     <div className='flex flex-col items-center space-y-36'>
       <Top />
       <Mission />
-      <Services />
-      <Article />
       <BlogArticle />
+      <Article />
       <Resources />
       <FAQ />
     </div>

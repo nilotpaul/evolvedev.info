@@ -27,7 +27,7 @@ export const getHygraphData = async (query: string, env: HygraphEnv) => {
 export const getPosts = async (env: HygraphEnv) => {
   const query = `
     query Posts {
-      posts {
+      posts (where: {isFeatured: true}) {
         id
         isLatest
         isFeatured

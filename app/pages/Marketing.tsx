@@ -3,6 +3,7 @@ import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Landing from '~/components/landing';
 import Navbar from '~/components/Navbar';
+import { useTheme } from '~/components/ThemeProvider';
 import { getPosts } from '~/lib/hygraph';
 
 export const loader = async ({ context }: LoaderFunctionArgs) => {
@@ -16,6 +17,10 @@ export const loader = async ({ context }: LoaderFunctionArgs) => {
 };
 
 const Marketing = () => {
+  const { theme } = useTheme();
+  if (!theme) {
+    return;
+  }
   return (
     <>
       <Navbar />

@@ -51,7 +51,7 @@ const Article = () => {
                 <CardHeader>
                   <AspectRatio ratio={16 / 9} className='overflow-hidden'>
                     <img
-                      src='/assets/dum-article.jpg'
+                      src={post.coverImg.url}
                       alt='Article 1'
                       className='h-full w-full rounded-sm object-cover'
                     />
@@ -59,7 +59,7 @@ const Article = () => {
                 </CardHeader>
                 <CardContent>
                   <span className='inline-block cursor-pointer rounded-lg bg-blue-500 bg-opacity-15 px-3 py-1 text-xs font-semibold capitalize tracking-wide text-blue-600'>
-                    {post.tag[0]}
+                    {post.category[0]}
                   </span>
                   <h3 className='my-5 line-clamp-3 text-lg font-bold leading-relaxed'>
                     <Link
