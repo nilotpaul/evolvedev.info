@@ -1,4 +1,4 @@
-name = "evolve-as-dev-remix"
+name = "evolve-dev-remix"
 compatibility_date = "2023-12-01"
 compatibility_flags = ["nodejs_compat"]
 

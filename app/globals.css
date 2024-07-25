@@ -1,45 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.noto-sans-600 {
-  font-family: "Noto Sans", sans-serif;
+.noto-sans {
+  font-family: 'Noto Sans', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 }
 
-.playwrite-hr-lijeva-400{
-  font-family: "Playwrite HR Lijeva", cursive;
+.roboto {
+  font-family: 'Roboto Mono', monospace;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
-.roboto-mono-500 {
-  font-family: "Roboto Mono", monospace;
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
 }
-
-.roboto-mono-400 {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 220 13% 91%;
     --foreground: 0 0% 3.9%;
 
     --card: 0 0% 100%;
@@ -106,6 +90,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply noto-sans bg-background text-foreground;
   }
 }

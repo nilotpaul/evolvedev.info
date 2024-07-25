@@ -1,19 +1,14 @@
 import Mission from '~/components/landing/Mission';
-import Top from './Top';
-import Services from './Services';
-import Resources from './Resources';
 import FAQ from './FAQ';
-import Article from './Article';
 import BlogArticle from './BlogArticles';
+import Hero from './Hero';
 
 const Landing = () => {
   return (
-    <div className='flex flex-col items-center space-y-36'>
-      <Top />
-      <Mission />
+    <div className='flex flex-col items-start gap-y-24 lg:gap-y-32'>
+      <Hero />
+      <Mission className='mb-16' />
       <BlogArticle />
-      <Article />
-      <Resources />
       <FAQ />
     </div>
   );

@@ -6,7 +6,7 @@ const FAQ = () => {
     <section className='w-full'>
       <Heading
         classNames={{
-          h1: 'text-center mx-auto text-2xl font-bold',
+          h1: 'text-2xl mx-auto text-center font-bold',
         }}
       >
         FAQ?

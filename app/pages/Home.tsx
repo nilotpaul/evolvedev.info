@@ -1,14 +1,14 @@
 import { Outlet } from '@remix-run/react';
+import { useMounted } from '~/hooks/useMounted';
+
 import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Navbar from '~/components/Navbar';
-import { useTheme } from '~/components/ThemeProvider';
 
 const Home = () => {
-  const { theme } = useTheme();
-  if (!theme) {
-    return;
-  }
+  const isMounted = useMounted();
+  if (!isMounted) return;
+
   return (
     <>
       <Navbar />

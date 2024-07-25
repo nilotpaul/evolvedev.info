@@ -10,11 +10,14 @@ type HeadingProps = {
 
 const Heading = ({ classNames, children, ...props }: HeadingProps) => {
   return (
-    <h2 className={cn('xs:text-xl w-fit text-base font-semibold md:text-2xl', classNames?.h1)}>
+    <h2
+      className={cn('xs:text-xl w-fit text-base font-semibold md:text-2xl', classNames?.h1)}
+      {...props}
+    >
       {children}
 
       <Separator
-        className={cn('mx-auto -ml-[1.75rem] mt-2 w-[calc(100%+3.5rem)]', classNames?.separator)}
+        className={cn('mx-auto mt-3 h-1 rounded-full bg-gray-400', classNames?.separator)}
       />
     </h2>
   );

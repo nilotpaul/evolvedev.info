@@ -1,17 +1,22 @@
+import { cn } from '~/lib/utils';
 import Heading from '../ui/Heading';
 
-const Mission = () => {
+type MissionProps = {
+  className?: string;
+};
+
+const Mission = ({ className }: MissionProps) => {
   return (
-    <section className='prose max-w-4xl text-center dark:prose-invert'>
+    <section className={cn('prose mx-auto max-w-4xl dark:prose-invert', className)}>
       <Heading
         classNames={{
-          h1: 'text-center mx-auto text-2xl font-bold roboto-mono-500',
+          h1: 'text-2xl mx-auto text-center font-bold',
         }}
       >
         Our Mission and Vision
       </Heading>
 
-      <p className='roboto-mono-500 mt-16 leading-loose'>
+      <p className='mt-10 text-center text-base leading-loose lg:text-lg'>
         At Evolve Dev, we’re dedicated to transforming the developer experience by providing
         state-of-the-art tools and expert guidance. Our mission is to empower developers to reach
         their full potential, optimize business processes, and enhance continuous learning and

@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
@@ -13,7 +11,7 @@ const AccordionItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> & {
     underline?: boolean;
   }
->(({ className, underline, ...props }, ref) => (
+>(({ underline, ...props }, ref) => (
   <AccordionPrimitive.Item ref={ref} className={cn(underline && 'border-b')} {...props} />
 ));
 AccordionItem.displayName = 'AccordionItem';
