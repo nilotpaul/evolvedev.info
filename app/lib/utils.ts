@@ -4,6 +4,7 @@ import { type ClassValue, clsx } from 'clsx';
 import { toast } from 'sonner';
 import { twMerge } from 'tailwind-merge';
 import { z } from 'zod';
+import app from '~/config/app';
 
 // type APIErrorResponse = { errorMsg: string }
 type CustomErrorMsg = {
@@ -68,4 +69,8 @@ export const getFallback = (name: string) => {
   const fallback = (firstName + lastName).toUpperCase();
 
   return { firstName, lastName, fallback };
+};
+
+export const makeMetaTitle = (title: string) => {
+  return `${app.title} | ${title}`;
 };

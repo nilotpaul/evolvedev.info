@@ -17,10 +17,7 @@ const Brand = ({ classNames, linkDisabled = false }: BrandProps) => {
     return (
       <div className='flex items-center gap-1.5'>
         <img
-          className={cn(
-            theme === 'dark' ? 'mix-blend-lighten' : 'mix-blend-darken',
-            classNames?.logo
-          )}
+          className={cn('mix-blend-darken dark:mix-blend-lighten', classNames?.logo)}
           src={theme === 'dark' ? '/logo-dark.png' : '/logo-light.png'}
           alt='Evolve Dev'
           width={45}
@@ -34,10 +31,7 @@ const Brand = ({ classNames, linkDisabled = false }: BrandProps) => {
   return (
     <Link to='/' className='mt-2 flex items-center space-x-1.5'>
       <img
-        className={cn(
-          theme === 'dark' ? 'mix-blend-lighten' : 'mix-blend-darken',
-          classNames?.logo
-        )}
+        className={cn('mix-blend-darken dark:mix-blend-lighten', classNames?.logo)}
         src={theme === 'dark' ? '/logo-dark.png' : '/logo-light.png'}
         alt='Evolve Dev'
         width={45}

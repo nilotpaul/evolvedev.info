@@ -10,13 +10,13 @@ const Mission = ({ className }: MissionProps) => {
     <section className={cn('prose mx-auto max-w-4xl dark:prose-invert', className)}>
       <Heading
         classNames={{
-          h1: 'text-2xl mx-auto text-center font-bold',
+          h1: 'text-2xl md:mx-auto md:text-center font-bold',
         }}
       >
         Our Mission and Vision
       </Heading>
 
-      <p className='mt-10 text-center text-base leading-loose lg:text-lg'>
+      <p className='mt-10 text-base leading-loose md:text-center lg:text-lg'>
         At Evolve Dev, we’re dedicated to transforming the developer experience by providing
         state-of-the-art tools and expert guidance. Our mission is to empower developers to reach
         their full potential, optimize business processes, and enhance continuous learning and

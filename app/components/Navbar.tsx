@@ -56,8 +56,10 @@ const MobileNav = () => {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger className='md:hidden'>{isOpen ? <X /> : <Text />}</SheetTrigger>
-      <SheetContent side='left' className='md:hidden'>
+      <SheetTrigger aria-label={isOpen ? 'Close Menu' : 'Open Menu'} className='md:hidden'>
+        {isOpen ? <X /> : <Text />}
+      </SheetTrigger>
+      <SheetContent aria-describedby='Navigation Menu' side='left' className='md:hidden'>
         <SheetHeader className='items-start gap-2'>
           <SheetTitle className='pb-3 underline'>Menu</SheetTitle>
           {NAV_LINKS.map((link) => (

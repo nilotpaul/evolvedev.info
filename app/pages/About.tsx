@@ -1,3 +1,14 @@
+import { MetaFunction } from '@remix-run/cloudflare';
+import { makeMetaTitle } from '~/lib/utils';
+
+export const meta: MetaFunction = () => {
+  return [
+    {
+      title: makeMetaTitle('About'),
+    },
+  ];
+};
+
 const About = () => {
   return (
     <>

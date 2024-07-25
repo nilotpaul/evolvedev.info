@@ -1,11 +1,25 @@
+import { MetaFunction } from '@remix-run/cloudflare';
 import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
+import { makeMetaTitle } from '~/lib/utils';
+
+export const meta: MetaFunction = () => {
+  return [
+    {
+      title: makeMetaTitle('Contact'),
+    },
+    {
+      name: 'description',
+      content: 'For any queries, issues, service assistance please contact us',
+    },
+  ];
+};
 
 const Contact = () => {
   return (
     <>
-      <section className='my-20 mb-32 grid-cols-2 place-content-center gap-16 space-y-12 md:space-y-0 lg:grid'>
+      <section className='my-20 mb-32 grid-cols-2 place-content-center gap-16 space-y-12 lg:grid lg:space-y-0'>
         <div className='flex flex-col items-start'>
           <h1 className='mb-4 text-4xl font-bold text-gray-800 dark:text-white sm:text-4xl'>
             Contact Us
@@ -21,7 +35,7 @@ const Contact = () => {
 
         <form
           onSubmit={(e) => e.preventDefault()}
-          className='flex w-full max-w-md flex-col gap-y-6 lg:ml-auto'
+          className='flex w-full max-w-md flex-col gap-y-4 lg:ml-auto lg:gap-y-6'
         >
           <div className='space-y-2'>
             <Label>Name</Label>
