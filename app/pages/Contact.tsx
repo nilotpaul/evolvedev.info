@@ -55,11 +55,13 @@ const Contact = () => {
           </div>
           <div className='space-y-2'>
             <Label>Name</Label>
-            <Input
-              type='text'
-              placeholder='Enter Message'
-              className='dark:border-whit border-[1.5px] border-black dark:border-white'
-            />
+            <textarea
+              id='message'
+              name='message'
+              required
+              placeholder='Enter your message'
+              className='h-32 w-full resize-none rounded border-[1.5px] border-black bg-[#E5E7EB] px-3 py-1 text-base leading-6 text-gray-900 outline-none dark:border-white dark:bg-[#0A0A0A] dark:text-white'
+            ></textarea>
           </div>
 
           <Button className='mt-3'>Send Message</Button>

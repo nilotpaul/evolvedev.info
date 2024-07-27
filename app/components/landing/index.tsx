@@ -2,6 +2,7 @@ import Mission from '~/components/landing/Mission';
 import FAQ from './FAQ';
 import BlogArticle from './BlogArticles';
 import Hero from './Hero';
+import Subscribe from './Subscribe';
 
 const Landing = () => {
   return (
@@ -10,6 +11,7 @@ const Landing = () => {
       <Mission className='mb-16' />
       <BlogArticle />
       <FAQ />
+      <Subscribe />
     </div>
   );
 };
