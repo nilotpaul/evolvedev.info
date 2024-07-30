@@ -13,13 +13,13 @@ export const faqs = [
   },
   {
     id: '3',
-    question: 'How can EvolveAsDev help improve my development process?',
+    question: 'How can Evolve As Dev help me?',
     answer:
       'EvolveAsDev simplifies the development process by providing ready-to-use tech stacks and configurations, reducing the time and effort needed to set up your development environment. This allows you to focus more on coding and less on setup.',
   },
   {
     id: '4',
-    question: 'What kind of resources does Evolve Dev offer?',
+    question: 'What resources does Evolve Dev offer?',
     answer:
       'Getting started with EvolveAsDev is easy. Simply visit our website, download the product, and follow our comprehensive setup guides. Our tutorials and documentation will help you configure and customize your development environment to suit your needs.',
   },
