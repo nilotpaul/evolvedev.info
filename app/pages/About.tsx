@@ -73,11 +73,10 @@ const About = () => {
             <div className='mb-12 max-w-2xl'>
               <h1 className='mb-4 text-3xl font-bold dark:text-black'>Our values</h1>
               <p className='mb-8 text-gray-600'>
-                At Evolve As Dev, our core values drive everything we do. They reflect our
-                commitment to excellence, innovation, and support in transforming the developer
-                experience. These values guide our decisions and shape the solutions we provide,
-                ensuring that we consistently deliver on our mission to empower and elevate
-                developers.
+                Our core values drive everything we do. They reflect our commitment to excellence,
+                innovation, and support in transforming the developer experience. These values guide
+                our decisions and shape the solutions we provide, ensuring that we consistently
+                deliver on our mission to empower and elevate developers.
               </p>
             </div>
             <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
