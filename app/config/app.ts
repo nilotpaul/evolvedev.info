@@ -13,19 +13,19 @@ export const cacheHeaders = (): HeadersFunction => {
 
 export const cspHeaders = (): HeadersFunction => {
   return () => ({
-    // // Content Security Policy (CSP)
-    // 'Content-Security-Policy':
-    //   "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://media.graphassets.com https://avatars.githubusercontent.com; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; object-src 'none'; frame-ancestors 'none';",
-    // // Prevent MIME type sniffing
-    // 'X-Content-Type-Options': 'nosniff',
-    // // Prevent clickjacking
-    // 'X-Frame-Options': 'DENY',
-    // // Enable XSS filter
-    // 'X-XSS-Protection': '1; mode=block',
-    // // Ensure browsers only use secure connections
-    // 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-    // // Enable HTTP to HTTPS upgrade
-    // 'Upgrade-Insecure-Requests': '1',
+    // Content Security Policy (CSP)
+    'Content-Security-Policy':
+      "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://media.graphassets.com https://avatars.githubusercontent.com; connect-src 'self'; font-src 'self' https://fonts.gstatic.com; object-src 'none'; frame-ancestors 'none';",
+    // Prevent MIME type sniffing
+    'X-Content-Type-Options': 'nosniff',
+    // Prevent clickjacking
+    'X-Frame-Options': 'DENY',
+    // Enable XSS filter
+    'X-XSS-Protection': '1; mode=block',
+    // Ensure browsers only use secure connections
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+    // Enable HTTP to HTTPS upgrade
+    'Upgrade-Insecure-Requests': '1',
   });
 };
 
