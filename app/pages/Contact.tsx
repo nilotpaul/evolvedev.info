@@ -2,6 +2,7 @@ import { MetaFunction } from '@remix-run/cloudflare';
 import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
+import { Textarea } from '~/components/ui/textarea';
 import { makeMetaTitle } from '~/lib/utils';
 
 export const meta: MetaFunction = () => {
@@ -55,13 +56,11 @@ const Contact = () => {
           </div>
           <div className='space-y-2'>
             <Label>Name</Label>
-            <textarea
-              id='message'
+            <Textarea
               name='message'
-              required
               placeholder='Enter your message'
-              className='h-32 w-full resize-none rounded border-[1.5px] border-black bg-[#E5E7EB] px-3 py-1 text-base leading-6 text-gray-900 outline-none dark:border-white dark:bg-[#0A0A0A] dark:text-white'
-            ></textarea>
+              className='dark:border-whit border-[1.5px] border-black dark:border-white'
+            />
           </div>
 
           <Button className='mt-3'>Send Message</Button>

@@ -2,7 +2,6 @@ import { Link, useLoaderData } from '@remix-run/react';
 import { getPosts } from '~/lib/hygraph';
 import { cn } from '~/lib/utils';
 import Heading from '../ui/Heading';
-import { Separator } from '../ui/separator';
 
 export default function BlogArticle() {
   const { posts } = useLoaderData<{ posts: Awaited<ReturnType<typeof getPosts>> }>();
@@ -23,7 +22,6 @@ export default function BlogArticle() {
           value tutorials & articles.
         </p>
       </div>
-      <Separator className='mt-9 h-[2.5px]' />
       <div
         className={cn(
           'mx-auto mt-12 grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:grid-cols-3',

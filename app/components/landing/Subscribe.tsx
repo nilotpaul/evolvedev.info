@@ -17,7 +17,7 @@ function Subscribe() {
     <div className='flex items-center justify-center'>
       <form
         onSubmit={handleSubscribe}
-        className='mx-auto flex w-full flex-col space-y-7 rounded-lg border p-10 py-8 shadow-lg dark:shadow-gray-800 md:w-[80%]'
+        className='mx-auto flex w-full flex-col space-y-7 rounded-lg border p-10 py-8 shadow-lg dark:shadow-gray-800 lg:w-[80%]'
       >
         <p className='text-xl font-bold'>Latest update in your inbox</p>
         <Label className='text-base font-medium' htmlFor='email'>
