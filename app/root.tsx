@@ -12,6 +12,7 @@ import {
 import { useTheme } from './components/ThemeProvider';
 import app, { cspHeaders } from './config/app';
 
+import NotFound from './pages/NotFound';
 import Providers from './components/Providers';
 import { Toaster } from 'sonner';
 import { cn } from './lib/utils';
@@ -124,7 +125,24 @@ export default function App() {
 export function ErrorBoundary() {
   const err = useRouteError();
 
-  console.log('root error:', err);
+  if (isRouteErrorResponse(err) && err.status === 404) {
+    return (
+      <html lang='en'>
+        <head>
+          <meta charSet='utf-8' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <Meta />
+          <Links />
+          <script dangerouslySetInnerHTML={{ __html: getInitialThemeScript() }} />
+        </head>
+        <body>
+          <Providers>
+            <NotFound />
+          </Providers>
+        </body>
+      </html>
+    );
+  }
 
-  return <pre>{JSON.stringify(err)}</pre>;
+  return <pre className='prose dark:prose-invert'>{JSON.stringify(err)}</pre>;
 }

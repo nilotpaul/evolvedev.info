@@ -16,8 +16,8 @@ const FAQ = () => {
       <Accordion type='single' collapsible className='mt-16 w-full space-y-4'>
         {faqs.map((faq) => (
           <AccordionItem value={faq.id} key={faq.id}>
-            <AccordionTrigger className='text-base font-bold'>{faq.question}</AccordionTrigger>
-            <AccordionContent className='text-xs md:text-sm'>{faq.answer}</AccordionContent>
+            <AccordionTrigger className='text-start font-semibold'>{faq.question}</AccordionTrigger>
+            <AccordionContent className='leading-relaxed'>{faq.answer}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
