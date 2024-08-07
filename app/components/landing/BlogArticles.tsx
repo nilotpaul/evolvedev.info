@@ -6,6 +6,7 @@ import { Separator } from '../ui/separator';
 
 export default function BlogArticle() {
   const { posts } = useLoaderData<{ posts: Awaited<ReturnType<typeof getPosts>> }>();
+  console.log(posts);
 
   return (
     <div className='my-20 flex flex-col'>

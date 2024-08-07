@@ -27,27 +27,38 @@ export const getHygraphData = async (query: string, env: HygraphEnv) => {
 export const getPosts = async (env: HygraphEnv) => {
   const query = `
     query Posts {
-      posts (where: {isFeatured: true}) {
+      forLandingPosts: posts(where: {forLanding: true}) {
         id
-        isLatest
-        isFeatured
         publishDate
         category
-        tag
-        slug
         title
         excerpt {
           text
         }
-        coverImg {
-          url
+        author
+      } 
+      isLatestPosts: posts(where: {isLatest: true}, first: 3) {
+        id
+        publishDate
+        category
+        title
+        excerpt {
+          text
         }
         author
-      }
+      }   
     }
   `;
 
   const { data } = await getHygraphData(query, env);
 
-  return data?.posts as Omit<Post, 'content'>[];
+  const combinedPosts = [
+    ...data.forLandingPosts,
+    ...data.isLatestPosts
+  ];
+  const uniquePosts = Array.from(new Map(combinedPosts.map(post => [post.id, post])).values());
+
+  return uniquePosts as Omit<Post, 'content'>[];
 };
+
+
