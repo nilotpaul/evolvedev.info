@@ -17,5 +17,9 @@ export type Post = {
   content: {
     markdown: string;
   };
-  author: string;
+  author: {
+    name: string,
+    img: string;
+    social: string
+  }
 };

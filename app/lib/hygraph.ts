@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { Post } from '~/types';
 
 type HygraphEnv = {
@@ -10,20 +10,30 @@ type HygraphEnv = {
 // Takes a graphql query of type string as parameter.
 // Returns the response object and the hygraph data.
 export const getHygraphData = async (query: string, env: HygraphEnv) => {
-  const result = await axios.post(
-    env.HYGRAPH_API_URL,
-    { query },
-    {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${env.HYGRAPH_API_TOKEN}`,
-      },
+  try {
+    const result = await axios.post(
+      env.HYGRAPH_API_URL,
+      { query },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${env.HYGRAPH_API_TOKEN}`,
+        },
+      }
+    );
+
+    return { response: result, data: result.data?.data ?? null };
+  } catch (err) {
+    if (err instanceof AxiosError) {
+      console.error('err fetching posts:', err.response?.data?.errors || err.response?.data);
+      return { response: err.response, data: null };
     }
-  );
 
-  return { response: result, data: result.data?.data ?? null };
+    console.error('err fetching posts:', err);
+
+    return { response: undefined, data: null };
+  }
 };
-
 export const getPosts = async (env: HygraphEnv) => {
   const query = `
     query Posts {
@@ -35,7 +45,11 @@ export const getPosts = async (env: HygraphEnv) => {
         excerpt {
           text
         }
-        author
+        author {
+          name
+          img
+          social
+        }
       } 
       isLatestPosts: posts(where: {isLatest: true}, first: 3) {
         id
@@ -45,7 +59,11 @@ export const getPosts = async (env: HygraphEnv) => {
         excerpt {
           text
         }
-        author
+        author {
+          name
+          img
+          social
+        }
       }   
     }
   `;

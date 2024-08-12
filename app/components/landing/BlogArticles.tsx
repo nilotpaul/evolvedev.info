@@ -5,7 +5,6 @@ import Heading from '../ui/Heading';
 
 export default function BlogArticle() {
   const { posts } = useLoaderData<{ posts: Awaited<ReturnType<typeof getPosts>> }>();
-  console.log(posts);
 
   return (
     <div className='my-20 flex flex-col'>
@@ -57,19 +56,23 @@ export default function BlogArticle() {
                   </h3>
                   <p className='mt-5 line-clamp-3 text-sm leading-6'>{post.excerpt.text}</p>
                 </div>
-                <div className='relative mt-8 flex items-center gap-x-4'>
+                <Link
+                  to={post.author.social}
+                  target='_blank'
+                  className='relative mt-8 flex items-center gap-x-4'
+                >
                   <img
                     alt='Soham Basak'
-                    src={'https://avatars.githubusercontent.com/u/71167911?v=4'}
+                    src={post.author.img}
                     className='h-10 w-10 rounded-full bg-gray-50'
                   />
                   <div className='text-sm leading-6'>
                     <p className='font-semibold'>
                       <span className='absolute inset-0' />
-                      {post.author}
+                      {post.author.name}
                     </p>
                   </div>
-                </div>
+                </Link>
               </article>
             ))}
           </>
