@@ -62,7 +62,7 @@ export default function BlogArticle() {
                   className='relative mt-8 flex items-center gap-x-4'
                 >
                   <img
-                    alt='Soham Basak'
+                    alt={post.author.name}
                     src={post.author.img}
                     className='h-10 w-10 rounded-full bg-gray-50'
                   />
