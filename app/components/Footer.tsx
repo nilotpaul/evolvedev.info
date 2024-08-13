@@ -40,7 +40,7 @@ const Footer = ({ className, ...props }: FooterProps) => {
             {/* <Link to='#' rel='noreferrer' target='_blank'>
               <Icons.Discord className='h-6 w-6 fill-slate-600 dark:fill-gray-300 hover:fill-black transition-colors' />
             </Link> */}
-            <Link to='https://dev.to/dexterxt' rel='noreferrer' target='_blank'>
+            <Link to='https://dev.to/evolvedev' rel='noreferrer' target='_blank'>
               <Icons.Dev_to className='h-7 w-7 fill-slate-600 transition-colors hover:fill-black dark:fill-gray-300' />
             </Link>
           </div>
