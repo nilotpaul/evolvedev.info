@@ -23,7 +23,7 @@ const About = () => {
           Our journey started with EvolveAsDev, a platform designed to offer developers
           preconfigured tech stacks, helper functions, and customizable configurations. The goal was
           simple—reduce the time spent setting up projects and let developers focus on what truly
-          matters: writing code. Whether you&appos;re a beginner or a seasoned developer, our tools
+          matters: writing code. Whether you&apos;re a beginner or a seasoned developer, our tools
           help streamline workflows and eliminate the usual setup hassles.
         </p>
         <p>

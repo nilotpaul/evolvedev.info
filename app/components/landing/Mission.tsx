@@ -19,7 +19,7 @@ const Mission = ({ className }: MissionProps) => {
       <p className='mt-10 text-base leading-loose md:text-center lg:text-lg'>
         At Evolve Dev, our goal is to make development faster and more efficient. We provide tools
         and guidance to streamline project creation, handle changes seamlessly, and support
-        developers at every stage. We&appos;re focused on building valuable open-source projects to
+        developers at every stage. We&apos;re focused on building valuable open-source projects to
         contribute to the community, with a long-term vision of helping companies of all sizes
         improve their development processes.
       </p>
