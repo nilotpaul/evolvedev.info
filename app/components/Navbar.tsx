@@ -7,7 +7,7 @@ import { NAV_LINKS } from '~/config/site-links';
 import Brand from './Brand';
 import { cn } from '~/lib/utils';
 import { Text, X } from 'lucide-react';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 
 const Navbar = () => {
   return (
@@ -63,17 +63,18 @@ const MobileNav = () => {
         <SheetHeader className='items-start gap-2'>
           <SheetTitle className='pb-3 underline'>Menu</SheetTitle>
           {NAV_LINKS.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                cn('mt-1 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300', {
-                  'font-semibold text-black': isActive,
-                })
-              }
-            >
-              {link.name}
-            </NavLink>
+            <SheetClose key={link.path}>
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  cn('mt-1 text-sm font-medium text-gray-700 hover:underline dark:text-gray-300', {
+                    'font-semibold text-black': isActive,
+                  })
+                }
+              >
+                {link.name}
+              </NavLink>
+            </SheetClose>
           ))}
         </SheetHeader>
       </SheetContent>

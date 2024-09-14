@@ -17,12 +17,11 @@ const Mission = ({ className }: MissionProps) => {
       </Heading>
 
       <p className='mt-10 text-base leading-loose md:text-center lg:text-lg'>
-        At Evolve Dev, we’re dedicated to transforming the developer experience by providing
-        state-of-the-art tools and expert guidance. Our mission is to empower developers to reach
-        their full potential, optimize business processes, and enhance continuous learning and
-        development. With innovative solutions like EvolveLogger we aim to change how developers
-        work, collaborate and create, ensuring they stay ahead of the fast-paced tech landscape.
-        Join us and enhance your growth journey to reach new heights in your career.
+        At Evolve Dev, our goal is to make development faster and more efficient. We provide tools
+        and guidance to streamline project creation, handle changes seamlessly, and support
+        developers at every stage. We&appos;re focused on building valuable open-source projects to
+        contribute to the community, with a long-term vision of helping companies of all sizes
+        improve their development processes.
       </p>
     </section>
   );

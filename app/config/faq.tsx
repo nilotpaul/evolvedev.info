@@ -1,38 +1,38 @@
 export const faqs = [
   {
-    id: '1',
-    question: 'What is EvolveAsDev?',
-    answer:
-      'EvolveAsDev is our flagship product designed to enhance the development experience for programmers. It offers preconfigured tech stacks, customizable configurations, helper functions, and pre-built libraries to streamline the setup process.',
-  },
-  {
     id: '2',
     question: 'What services does Evolve Dev provide?',
     answer:
-      'Evolve Dev provides a range of services including preconfigured tech stacks, customizable configurations, helper functions, pre-built libraries, tutorials, blogs, and hands-on guides. Our content covers topics like microservice architecture, secure authentication, DevOps, cloud computing, and server-side development.',
+      'Evolve Dev offers tools like EvolveAsDev, along with tutorials, guides, and libraries covering topics like microservices, secure authentication, DevOps, cloud computing, and server-side development. We aim to help developers work smarter and faster.',
+  },
+  {
+    id: '1',
+    question: 'What is EvolveAsDev?',
+    answer:
+      'EvolveAsDev is a platform that provides preconfigured tech stacks, and pre-built libraries, tutorials, etc. It helps developers quickly set up their environment and start coding without the usual configuration hassle.',
   },
   {
     id: '3',
-    question: 'How can Evolve As Dev help me?',
+    question: 'How can EvolveAsDev help me?',
     answer:
-      'EvolveAsDev simplifies the development process by providing ready-to-use tech stacks and configurations, reducing the time and effort needed to set up your development environment. This allows you to focus more on coding and less on setup.',
+      'EvolveAsDev provides ready-to-use tech stacks and customizable configurations to reduce setup time. Whether you’re working on a small project or a large application, it lets you focus on building features rather than managing infrastructure.',
   },
   {
     id: '4',
-    question: 'What resources does Evolve Dev offer?',
+    question: 'What is KyrixJs?',
     answer:
-      'Getting started with EvolveAsDev is easy. Simply visit our website, download the product, and follow our comprehensive setup guides. Our tutorials and documentation will help you configure and customize your development environment to suit your needs.',
+      'KyrixJs is a full-stack framework designed for developers who need the performance of a client-side React app with the SEO benefits of server-side rendering. It combines fast builds, shared type safety between client and server, and pre-configured bundles for databases and CSS frameworks, making it ideal for modern web applications.',
   },
   {
     id: '5',
-    question: 'Who can benefit from using EvolveAsDev?',
+    question: 'Who can benefit from using Evolve Dev products?',
     answer:
-      'EvolveAsDev is designed for developers of all levels, from beginners to experienced professionals. Whether you are working on small projects or large-scale applications, our tools and resources can help enhance your development experience.',
+      'Our tools and resources are designed for developers of all levels. Whether you’re a beginner setting up your first project or an experienced developer working on complex applications, EvolveAsDev or KyrixJs can streamline your workflow and improve productivity.',
   },
   {
     id: '6',
-    question: 'How does Evolve Dev ensure the quality of its content?',
+    question: 'How does Evolve Dev ensure quality and relevance?',
     answer:
-      'All our content is based on our own experiences and learnings, ensuring it is practical and relevant. We continuously update our resources to reflect the latest industry trends and best practices, providing developers with up-to-date and reliable information.',
+      'We base all our content on real-world experience and update it regularly to reflect the latest industry trends. Our goal is to provide practical, up-to-date solutions that developers can rely on in their everyday work.',
   },
 ];

@@ -22,7 +22,8 @@ function Subscribe() {
         <p className='text-xl font-bold'>Latest update in your inbox</p>
         <Label className='text-base font-medium' htmlFor='email'>
           Join our EvolveDev community and stay ahead of the curve! Get the latest insights,
-          tutorials, and trends in software development delivered straight to your inbox !
+          tutorials, and trends in programing world delivered straight to your inbox! Don&apos;t
+          worry no spam 👍.
         </Label>
 
         <div className='flex items-center justify-center gap-4'>

@@ -11,7 +11,7 @@ const Hero = () => {
         </h1>
 
         <p className='mt-8 max-w-lg text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-400 md:mx-auto md:text-center lg:mx-0 lg:text-start lg:text-xl'>
-          Powering the future of web development with EvolveDev.
+          Powering the future of mordern development with EvolveDev.
         </p>
       </div>
 
