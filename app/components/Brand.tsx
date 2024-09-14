@@ -30,13 +30,15 @@ const Brand = ({ classNames, linkDisabled = false }: BrandProps) => {
 
   return (
     <Link to='/' className='mt-2 flex items-center space-x-1.5'>
-      <img
-        className={cn('mix-blend-darken dark:mix-blend-lighten', classNames?.logo)}
-        src={theme === 'dark' ? '/logo-dark.png' : '/logo-light.png'}
-        alt='Evolve Dev'
-        width={45}
-        height={45}
-      />
+      {theme && (
+        <img
+          className={cn('mix-blend-darken dark:mix-blend-lighten', classNames?.logo)}
+          src={theme === 'dark' ? '/logo-dark.png' : '/logo-light.png'}
+          alt='Evolve Dev'
+          width={45}
+          height={45}
+        />
+      )}
       <p className={cn('-mt-1 text-lg font-semibold', classNames?.name)}>EvolveDev</p>
     </Link>
   );

@@ -1,5 +1,4 @@
 import { json, LoaderFunctionArgs } from '@remix-run/cloudflare';
-import { useMounted } from '~/hooks/useMounted';
 import { getPosts } from '~/lib/hygraph';
 
 import Container from '~/components/Container';
@@ -17,7 +16,7 @@ export const loader = async ({ context }: LoaderFunctionArgs) => {
     HYGRAPH_API_TOKEN: env.HYGRAPH_API_TOKEN,
   });
 
-  if (!posts || posts.length === 0) {
+  if (!posts) {
     return json({ posts: [] });
   }
 
@@ -25,9 +24,6 @@ export const loader = async ({ context }: LoaderFunctionArgs) => {
 };
 
 const Marketing = () => {
-  const isMounted = useMounted();
-  if (!isMounted) return;
-
   return (
     <>
       <Navbar />

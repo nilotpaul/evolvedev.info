@@ -31,9 +31,9 @@ const About = () => {
             enabling developers to reach their full potential.
           </p>
           <p className='py-2 leading-relaxed dark:text-gray-300'>
-            Join us on our mission to transform the development journey. Whether you're a seasoned
-            professional or just starting, EvolveDev provides the platform and support you need to
-            thrive. Together, we can shape the future of development, creating a world where
+            Join us on our mission to transform the development journey. Whether you&appos;re a
+            seasoned professional or just starting, EvolveDev provides the platform and support you
+            need to thrive. Together, we can shape the future of development, creating a world where
             developers are equipped to tackle any challenge and drive technological progress.
           </p>
         </div>

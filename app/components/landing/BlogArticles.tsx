@@ -59,6 +59,7 @@ export default function BlogArticle() {
                 <Link
                   to={post.author.social}
                   target='_blank'
+                  rel='noreferrer'
                   className='relative mt-8 flex items-center gap-x-4'
                 >
                   <img

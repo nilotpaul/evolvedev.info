@@ -35,12 +35,7 @@ const Services = () => {
         Our Services
       </Heading>
 
-      <Carousel
-        opts={{ loop: true }}
-        // @ts-expect-error shadcn carousel deps version issue.
-        plugins={[plugin.current]}
-        className='mt-16 w-full'
-      >
+      <Carousel opts={{ loop: true }} plugins={[plugin.current]} className='mt-16 w-full'>
         <CarouselContent>
           {Array(3)
             .fill(posts[0])
