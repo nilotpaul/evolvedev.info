@@ -26,7 +26,7 @@ export default function BlogArticle() {
         className={cn(
           'mx-auto mt-12 grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:grid-cols-3',
           {
-            block: !posts || posts.length === 0,
+            block: !posts,
           }
         )}
       >

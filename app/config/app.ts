@@ -31,7 +31,7 @@ export const cspHeaders = (): HeadersFunction => {
 
 const SITE_TITLE = 'Evolve Dev';
 const SITE_DESCRIPTION =
-  'At Evolve Dev, we’re dedicated to transforming the developer experience by providing state-of-the-art tools and expert guidance. Our mission is to empower developers to reach their full potential, optimize business processes, and enhance continuous learning and development.';
+  'At Evolve Dev, our goal is to make development faster and more efficient. We provide tools and guidance to streamline project creation, handle changes seamlessly, and support developers at every stage.';
 const SITE_OG_IMAGE = '/banner.png';
 const SITE_DOMAIN = 'https://evolvedev.info';
 

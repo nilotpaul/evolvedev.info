@@ -1,4 +1,5 @@
 import { MetaFunction } from '@remix-run/cloudflare';
+import { Link } from '@remix-run/react';
 import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
@@ -28,10 +29,16 @@ const Contact = () => {
           <p className='text-lg leading-relaxed text-gray-900 dark:text-gray-300'>
             At EvolveDev, we&apos;re always here to help. Whether you have a question, need
             assistance, or just want to say hello, we&apos;d love to hear from you.
-            <br />
-            <br />
-            Our dedicated team is committed to providing exceptional support and service.
           </p>
+          <Link
+            to='https://mail.google.com/mail/?view=cm&fs=1&to=contact@evolvedev.info&body=Dear%20EvolveDev%2C%0D%0A%0D%0A[Your%20message%20here]%0D%0A%0D%0AThank%20you%2C%0D%0A%5BYour%20Name%5D'
+            target='_blank'
+            rel='noreferrer'
+            referrerPolicy='no-referrer'
+            className='mt-5 font-semibold hover:underline'
+          >
+            contact@evolvedev.info
+          </Link>
         </div>
 
         <form

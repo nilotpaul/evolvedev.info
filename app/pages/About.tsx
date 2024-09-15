@@ -6,6 +6,10 @@ export const meta: MetaFunction = () => {
     {
       title: makeMetaTitle('About'),
     },
+    {
+      name: 'description',
+      content: "Learn about EvolveDev and it's purpose",
+    },
   ];
 };
 
