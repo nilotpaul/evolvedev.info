@@ -45,6 +45,7 @@ export const getPosts = async (env: HygraphEnv) => {
         excerpt {
           text
         }
+        slug
         author {
           name
           img
@@ -59,6 +60,7 @@ export const getPosts = async (env: HygraphEnv) => {
         excerpt {
           text
         }
+        slug
         author {
           name
           img
@@ -70,13 +72,8 @@ export const getPosts = async (env: HygraphEnv) => {
 
   const { data } = await getHygraphData(query, env);
 
-  const combinedPosts = [
-    ...data.forLandingPosts,
-    ...data.isLatestPosts
-  ];
-  const uniquePosts = Array.from(new Map(combinedPosts.map(post => [post.id, post])).values());
+  const combinedPosts = [...data.forLandingPosts, ...data.isLatestPosts];
+  const uniquePosts = Array.from(new Map(combinedPosts.map((post) => [post.id, post])).values());
 
   return uniquePosts as Omit<Post, 'content'>[];
 };
-
-
