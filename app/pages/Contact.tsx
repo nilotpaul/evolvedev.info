@@ -1,9 +1,17 @@
 import { MetaFunction } from '@remix-run/cloudflare';
 import { Link } from '@remix-run/react';
 import { Button } from '~/components/ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '~/components/ui/form';
 import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
 import { Textarea } from '~/components/ui/textarea';
+import { useContact } from '~/hooks/useCommunication';
 import { makeMetaTitle } from '~/lib/utils';
 
 export const meta: MetaFunction = () => {
@@ -19,6 +27,8 @@ export const meta: MetaFunction = () => {
 };
 
 const Contact = () => {
+  const [form, contactMutation] = useContact();
+
   return (
     <>
       <section className='my-20 mb-32 grid-cols-2 place-content-center gap-16 space-y-12 lg:grid lg:space-y-0'>
@@ -41,37 +51,71 @@ const Contact = () => {
           </Link>
         </div>
 
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className='flex w-full max-w-md flex-col gap-y-4 lg:ml-auto lg:gap-y-6'
-        >
-          <div className='space-y-2'>
-            <Label>Name</Label>
-            <Input
-              className='border-[1.5px] border-black dark:border-white'
-              type='text'
-              placeholder='Enter your Name'
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit((v) => contactMutation.mutate(v))}
+            className='flex w-full max-w-md flex-col gap-y-4 lg:ml-auto lg:gap-y-6'
+          >
+            <FormField
+              control={form.control}
+              name='name'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      className='border-[1.5px] border-black dark:border-white'
+                      type='text'
+                      placeholder='Enter your Name'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage>{form.formState.errors.name?.message}</FormMessage>
+                </FormItem>
+              )}
             />
-          </div>
-          <div className='space-y-2'>
-            <Label>Email</Label>
-            <Input
-              type='email'
-              placeholder='Enter Email'
-              className='dark:border-whit border-[1.5px] border-black dark:border-white'
-            />
-          </div>
-          <div className='space-y-2'>
-            <Label>Name</Label>
-            <Textarea
-              name='message'
-              placeholder='Enter your message'
-              className='dark:border-whit border-[1.5px] border-black dark:border-white'
-            />
-          </div>
 
-          <Button className='mt-3'>Send Message</Button>
-        </form>
+            <FormField
+              control={form.control}
+              name='email'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      type='email'
+                      placeholder='Enter Email'
+                      className='border-[1.5px] border-black dark:border-white'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage>{form.formState.errors.email?.message}</FormMessage>
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='message'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder='Enter your message'
+                      className='dark:border-whit border-[1.5px] border-black dark:border-white'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage>{form.formState.errors.message?.message}</FormMessage>
+                </FormItem>
+              )}
+            />
+
+            <Button isLoading={contactMutation.isPending} type='submit' className='mt-3'>
+              Send Message
+            </Button>
+          </form>
+        </Form>
       </section>
     </>
   );

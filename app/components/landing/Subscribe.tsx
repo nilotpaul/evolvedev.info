@@ -1,22 +1,16 @@
 import { MailCheckIcon } from 'lucide-react';
-import { useState } from 'react';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Button } from '../ui/button';
+import { useSubscription } from '~/hooks/useCommunication';
 
 function Subscribe() {
-  const [email, setEmail] = useState('');
-
-  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    console.log(email);
-  };
+  const [form, mutation] = useSubscription();
 
   return (
     <div className='flex items-center justify-center'>
       <form
-        onSubmit={handleSubscribe}
+        onSubmit={form.handleSubmit((v) => mutation.mutate(v))}
         className='mx-auto flex w-full flex-col space-y-7 rounded-lg border p-10 py-8 shadow-lg dark:shadow-gray-800 lg:w-[80%]'
       >
         <p className='text-xl font-bold'>Latest update in your inbox</p>
@@ -30,14 +24,15 @@ function Subscribe() {
           <MailCheckIcon className='h-7 w-7' />
           <Input
             type='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            {...form.register('email')}
             placeholder='Enter your email here'
             className='h-8'
           />
         </div>
 
-        <Button type='submit'>Subscribe</Button>
+        <Button isLoading={mutation.isPending} type='submit'>
+          Subscribe
+        </Button>
       </form>
     </div>
   );
