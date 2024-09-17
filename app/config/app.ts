@@ -15,7 +15,7 @@ export const cspHeaders = (): HeadersFunction => {
   return () => ({
     // Content Security Policy (CSP)
     'Content-Security-Policy':
-      "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://media.graphassets.com https://avatars.githubusercontent.com; connect-src 'self' https://evolveasdev.com https://*.evolveasdev.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; frame-ancestors 'none';",
+      "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://media.graphassets.com https://avatars.githubusercontent.com; connect-src 'self' https://evolveasdev.com https://*.evolveasdev.com; font-src 'self' https://fonts.gstatic.com; object-src 'none'; frame-ancestors 'none';",
     // Prevent MIME type sniffing
     'X-Content-Type-Options': 'nosniff',
     // Prevent clickjacking
