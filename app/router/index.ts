@@ -13,6 +13,7 @@ export const routesConfig = (routes: DefineRouteFunction) => {
 
   // Loaders and Actions
   routes('/sitemap.xml', 'server/loaders/sitemap.loader.ts');
+  routes('/robots.txt', 'server/loaders/robots.loader.ts');
 
   // Catch all routes that doesn't exists and show a 404 page.
   routes('*', 'pages/NotFound.tsx', { id: '404' });
