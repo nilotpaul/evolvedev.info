@@ -94,6 +94,16 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
         <script dangerouslySetInnerHTML={{ __html: getInitialThemeScript() }} />
+        {/* <!-- Google tag (gtag.js) --> */}
+        <script async src='https://www.googletagmanager.com/gtag/js?id=G-078BS298KC' />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+                     function gtag(){dataLayer.push(arguments);}
+                     gtag('js', new Date());
+                     gtag('config', 'G-078BS298KC');`,
+          }}
+        />
       </head>
       <body>
         <Toaster
