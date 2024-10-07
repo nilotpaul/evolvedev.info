@@ -1,8 +1,7 @@
 import { LoaderFunction } from '@remix-run/cloudflare';
 import { NAV_LINKS } from '~/config/site-links';
 
-const siteUrl =
-  process.env.NODE_ENV !== 'production' ? 'http://localhost:5175' : 'https://evolvedev.info';
+const siteUrl = !import.meta.env.PROD ? 'http://localhost:5175' : 'https://evolvedev.info';
 
 const makeUrl = (path: string, lastMod: Date) =>
   `<url><loc>${siteUrl}${path}</loc><lastmod>${lastMod.toISOString()}</lastmod></url>`;

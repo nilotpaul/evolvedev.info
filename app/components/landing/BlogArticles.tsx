@@ -32,50 +32,53 @@ export default function BlogArticle() {
       >
         {posts && posts.length !== 0 ? (
           <>
-            {posts.map((post) => (
-              <article
-                key={post.id}
-                className='flex max-w-xl flex-col items-start justify-between rounded-md border p-5 py-8 shadow-lg transition-colors hover:border-blue-500 dark:shadow-md dark:shadow-gray-800'
-              >
-                <div className='flex items-center gap-x-4 text-xs'>
-                  <time dateTime={post.publishDate}>{post.publishDate}</time>
-                  <span className='inline-block rounded-lg bg-blue-500 bg-opacity-15 px-3 py-1 text-xs font-semibold capitalize tracking-wide text-blue-600'>
-                    {post.category[0]}
-                  </span>
-                </div>
-                <div className='group'>
-                  <h3 className='mt-3 text-lg font-semibold leading-6 transition-colors group-hover:text-black/70 dark:group-hover:text-gray-300'>
-                    <Link
-                      to={`https://evolveasdev.com/blogs/${post.category[0]}/${post.slug}`}
-                      referrerPolicy='no-referrer'
-                      rel='noreferrer'
-                      target='_blank'
-                    >
-                      {post.title}
-                    </Link>
-                  </h3>
-                  <p className='mt-5 line-clamp-3 text-sm leading-6'>{post.excerpt.text}</p>
-                </div>
-                <Link
-                  to={post.author.social}
-                  target='_blank'
-                  rel='noreferrer'
-                  className='relative mt-8 flex items-center gap-x-4'
+            {posts
+              // Will sort it in alphabetical order
+              .sort((a, b) => a.title.localeCompare(b.title))
+              .map((post) => (
+                <article
+                  key={post.id}
+                  className='flex max-w-xl flex-col items-start justify-between rounded-md border p-5 py-8 shadow-lg transition-colors hover:border-blue-500 dark:shadow-md dark:shadow-gray-800'
                 >
-                  <img
-                    alt={post.author.name}
-                    src={post.author.img}
-                    className='h-10 w-10 rounded-full bg-gray-50'
-                  />
-                  <div className='text-sm leading-6'>
-                    <p className='font-semibold'>
-                      <span className='absolute inset-0' />
-                      {post.author.name}
-                    </p>
+                  <div className='flex items-center gap-x-4 text-xs'>
+                    <time dateTime={post.publishDate}>{post.publishDate}</time>
+                    <span className='inline-block rounded-lg bg-blue-500 bg-opacity-15 px-3 py-1 text-xs font-semibold capitalize tracking-wide text-blue-600'>
+                      {post.category[0]}
+                    </span>
                   </div>
-                </Link>
-              </article>
-            ))}
+                  <div className='group'>
+                    <h3 className='mt-3 text-lg font-semibold leading-6 transition-colors group-hover:text-black/70 dark:group-hover:text-gray-300'>
+                      <Link
+                        to={`https://evolveasdev.com/blogs/${post.category[0]}/${post.slug}`}
+                        referrerPolicy='no-referrer'
+                        rel='noreferrer'
+                        target='_blank'
+                      >
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <p className='mt-5 line-clamp-3 text-sm leading-6'>{post.excerpt.text}</p>
+                  </div>
+                  <Link
+                    to={post.author.social}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='relative mt-8 flex items-center gap-x-4'
+                  >
+                    <img
+                      alt={post.author.name}
+                      src={post.author.img}
+                      className='h-10 w-10 rounded-full bg-gray-50'
+                    />
+                    <div className='text-sm leading-6'>
+                      <p className='font-semibold'>
+                        <span className='absolute inset-0' />
+                        {post.author.name}
+                      </p>
+                    </div>
+                  </Link>
+                </article>
+              ))}
           </>
         ) : (
           <p className='w-full text-red-500'>

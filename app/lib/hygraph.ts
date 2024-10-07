@@ -52,7 +52,7 @@ export const getPosts = async (env: HygraphEnv) => {
           social
         }
       } 
-      isLatestPosts: posts(where: {isLatest: true}, first: 3) {
+      isLatestPosts: posts(last: 3) {
         id
         publishDate
         category
