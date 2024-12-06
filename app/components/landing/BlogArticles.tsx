@@ -24,7 +24,7 @@ export default function BlogArticle() {
       </div>
       <div
         className={cn(
-          'mx-auto mt-12 grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:grid-cols-3',
+          'mx-auto mt-12 grid w-full grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:grid-cols-2',
           {
             block: !posts,
           }
